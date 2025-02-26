@@ -1,6 +1,12 @@
-# Emotion Detection API
+# Face Analysis API
 
-This is a FastAPI application that provides real-time emotion detection using the DeepFace library.
+This is a FastAPI application that provides real-time face analysis using the DeepFace library.
+
+## Features
+
+- **Emotion Detection**: Analyze facial expressions to detect emotions
+- **Live Face Analysis**: Real-time analysis of faces via webcam feed
+- **Extended Analysis**: Detect age, gender, and ethnicity in addition to emotions
 
 ## Setup
 

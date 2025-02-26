@@ -5,3 +5,5 @@ tensorflow==2.12.0
 deepface==0.0.93
 pillow==9.5.0
 numpy==1.23.5
+opencv-python==4.7.0.72
+websockets==11.0.2
