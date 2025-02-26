@@ -1,4 +1,7 @@
 from fastapi import FastAPI, UploadFile, HTTPException
+from fastapi.responses import HTMLResponse
+from fastapi.staticfiles import StaticFiles
+import pathlib
 from deepface import DeepFace
 import numpy as np
 from PIL import Image
@@ -19,9 +22,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.get("/")
-async def root():
-    return {"message": "Welcome to Emotion Detection API"}
+app.mount("/static", StaticFiles(directory="static"), name="static")
+
+@app.get("/", response_class=HTMLResponse)
+async def get_index():
+    return pathlib.Path("index.html").read_text()
 
 @app.post("/detect-emotion")
 async def detect_emotion(image: UploadFile):
