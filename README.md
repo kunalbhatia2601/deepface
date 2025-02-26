@@ -5,11 +5,13 @@ This is a FastAPI application that provides real-time emotion detection using th
 ## Setup
 
 1. Install dependencies:
+
 ```bash
 pip install -r requirements.txt
 ```
 
 2. Run the application:
+
 ```bash
 python app.py
 ```
@@ -21,6 +23,7 @@ The server will start at `http://localhost:8000`
 ### POST /detect-emotion
 
 Upload an image to detect emotions. The API will return:
+
 - Dominant emotion
 - Scores for all emotions (angry, disgust, fear, happy, sad, surprise, neutral)
 
