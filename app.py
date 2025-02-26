@@ -3,11 +3,20 @@ from deepface import DeepFace
 import numpy as np
 from PIL import Image
 import io
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(
     title="Emotion Detection API",
     description="Real-time face emotion detection using DeepFace",
     version="1.0.0"
+)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # For development only. Configure properly in production
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 @app.get("/")
