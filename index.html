@@ -62,7 +62,7 @@
             formData.append('image', imageInput.files[0]);
 
             try {
-                const response = await fetch('http://localhost:8000/detect-emotion', {
+                const response = await fetch('https://deepface-68zt.onrender.com/detect-emotion', {
                     method: 'POST',
                     body: formData
                 });
